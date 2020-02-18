@@ -7,6 +7,8 @@ class TestModel extends Model
 {
     use SearchableTrait;
 
+    protected $searchable = [];
+
     protected function newBaseQueryBuilder()
     {
         return new TestBuilder;

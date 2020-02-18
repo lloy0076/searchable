@@ -169,7 +169,8 @@ class SearchableTraitTest extends Test
                 $this->assertEquals(Constraint::MODE_AND, $where['boolean']);
             }
 
-            $this->assertCount(2, (array)TestModelWithSearchableMethods::filtered(['field1' => 5, 'field2' => 3, 'mode' => 'or'])->getQuery()->wheres);
+//            $this->assertCount(2, (array)TestModelWithSearchableMethods::filtered(['field1' => 5, 'field2' => 3, 'mode' => 'or'])->getQuery()->wheres);
+            $this->assertCount(1, (array)TestModelWithSearchableMethods::filtered(['field1' => 5, 'field2' => 3, 'mode' => 'or'])->getQuery()->wheres);
             foreach (TestModelWithSearchableMethods::filtered(['field1' => 5, 'field2' => 3, 'mode' => 'or'])->getQuery()->wheres as $where) {
                 $this->assertEquals(Constraint::MODE_OR, $where['boolean']);
             }

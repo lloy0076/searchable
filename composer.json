@@ -21,11 +21,14 @@
   ],
   "require": {
     "illuminate/database": "*",
-    "illuminate/support": "*"
+    "illuminate/support": "*",
+    "laravel/helpers": "^1.1"
   },
   "require-dev": {
-    "codeception/codeception": "2.0.*",
-    "codeception/specify": "*"
+    "codeception/codeception": "*",
+    "codeception/specify": "*",
+    "codeception/module-asserts": "^1.1",
+    "symfony/var-dumper": "^5.0"
   },
   "suggest": {
     "jedrzej/sortable": "Allows sorting your models using request parameters",
